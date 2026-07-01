@@ -1,0 +1,181 @@
+div.first {
+    border: 1px solid red;
+
+    width: 150px;
+    height: 200px;
+
+    /* margin-top:-50px; */
+}
+div.second {
+    /* border: 1px solid red; */
+
+    width: 150px;
+    height: 200px;
+
+    margin-top: 50px;
+    
+    margin-right: 40px;
+
+    margin-bottom: 30px;
+
+    margin-left: 20px;
+
+    /* margin은 보더 바깥쪽 영역 */
+
+
+    /* margin의 축약형
+    4개 일 때 : top right bottom left 순이다.*/
+    margin: 50px 40px 30px 20px;
+    
+    /*3개 일 때 : top 좌우 bottom 순으로 바뀐다.*/
+    margin: 50px 40px 30px;
+
+    /*2개 일 때 : 상하 좌우 로 바뀐다 */
+    margin: 50px 40px;
+
+    /*1개 일 때 : 상하좌우 바뀐다.*/
+    margin: 30px;
+
+
+    padding-top: 20px;
+
+    padding-right: 15px;
+
+    padding-bottom: 10px;
+
+    padding-left: 5px;
+
+    padding: 30px;
+
+    /*width,style,color 3가지를 따로 표현 가능
+    width style은 필수
+    border-radius
+        모서리를 둥글게 변환.
+        축약형의 경우 11시부터 시계방향으로
+     */
+
+    border-top-width: 3px;
+    border-top-style: solid;
+    border-top-color: blue;
+
+    border-left:3px dashed blue;
+
+    border: 1px solid blue;
+    border-left:2px dashed blue;
+
+    border-radius: 50%;
+
+}
+.profile img {
+    border: 1px solid #000;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+}
+
+.chat.right{
+    border:1px solid #000;
+    background-color: yellow;
+/* width
+컨텐츠 영역의 너비
+min-width : 최소로 보장하는 너비
+max-width : 최대로 보장하는 너비
+*/
+
+
+/* height
+컨텐츠 영역의 높이
+min-height : 최소로 보장하는 높이
+max-height : 최대로 보장하는 높이 
+ */
+
+
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px 0px 10px 10px;
+}
+.chat.left{
+    border: 1px solid #000;
+    background-color: yellow;
+
+    width: 100px;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px 10px 10px 0px;
+}
+
+.width {
+    border: 1px solid red;
+    width: 70%;
+
+    min-width: 400px;
+    max-width: 700px;
+}
+
+#auto {
+    border:1px solid red;
+    width:150px;
+    margin: 10px auto;
+}
+/*box-sizing
+    border-box
+        border 두께 + padding + 컨텐츠의 크기를 width나 height로 계산
+        content-box:이게 기본값. 컨텐츠 크기만 width, height로 계산한다.
+ */
+
+.box {
+    border: 1px solid black;
+
+    width:300px;
+    height:300px;
+    margin:50px;
+}
+
+.box-sizing {
+    padding:50px;
+
+    box-sizing: border-box;
+}
+
+.orig {
+    border:1px solid red;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* 마진 중첩
+    세로 방향으로 붙어 있을 때 또는
+    부모와 첫번째 자식 간에 margin이 큰 값 하나만 적용되는 현상
+    */
+    /*해법
+    1. 사이에 컨텐츠 넣기
+    2. border나 padding을 넣어 부모와 첫번째 자식간의 마진 중첩 해결 가능
+    3. 부모에 overflow:hidden을 추가 - 주로 사용됨
+    4. 일부러 형제간의 마진 중첩을 해소하기 위해 부모를 설정하기도 함.
+     */
+
+#div2, #div3{
+    margin:30px;
+
+}
+
+#div3{
+    margin:50px;
+}
+
+#div1{
+    /* border:1px solid red; */
+    /* padding-top:1px; */
+    overflow: hidden;
+
+}
+
+#div2{
+    /* margin-top: -1px; */
+}
+

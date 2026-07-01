@@ -1,0 +1,48 @@
+.no1{
+    border:1px solid rgb(219, 203, 203);
+    display:inline-block;
+    width: 125px;
+    vertical-align:top;
+}
+.no2{
+    border:1px solid rgb(219, 203, 203);
+    display:inline-block;
+    width: 125px;
+}
+
+.no1 .tkwls{
+    border: 1px;
+    width: 75px;
+     height: 75px; 
+    /* display:inline-block; */
+
+
+
+}
+.no2 .tkwls{
+    border: 1px;
+    width: 75px;
+     height: 75px; 
+    /* display:inline-block; */
+
+
+}
+
+.all .no1{
+    text-align:center;
+}
+
+.all .no2{
+    /*text-align:center는 부모에게 적용해서 밑에 자식에게 영향을 주는것*/
+    text-align:center;
+}
+
+
+.xprtmxm{
+    border:1px;
+    /* display:inline-block; */
+    width:110px;
+    font-size:12px;
+    height:50px;
+    /* display:inline-block; */
+}

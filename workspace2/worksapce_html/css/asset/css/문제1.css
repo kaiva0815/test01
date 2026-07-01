@@ -1,0 +1,26 @@
+#box1 {
+    background-color: coral;
+    padding:100px;
+    text-align:center;
+}
+
+.bigtext1{
+    font-size:2.25em;
+    color:white;
+}
+.smalltext1{
+    margin-top:15px;
+    font-size:1.5em;
+    color:white;
+    margin-bottom:15px;
+}
+.link{
+    border-bottom:2px dotted red;
+    color:white;
+}
+
+.button:hover{
+    /* font-size:10px; */
+    background-color: rgba(255, 255, 255, 0.5)
+
+}

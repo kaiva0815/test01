@@ -1,0 +1,106 @@
+#div1{
+    border: 1px solid red;
+}
+.block{
+    border: 1px solid red;
+    width:100px;
+    height:50px;
+    margin: 10px auto;
+}
+.inline {
+    border: 1px solid red;
+    width:200px;
+    heigth:100px;
+    margin:30px 50px;
+    background-color: aqua;
+    padding:30px 50px;
+    /*  inline의 특징
+    자리가 없으면 밑으로 내려감.
+    width(너비)와 height(높이)가 적용되지 않는다.
+    margin의 좌우가 적용이 되나 위 아래는 적용이 안됨
+    상하 건들이다 border의 영역이 밀려서 출력되니 머리 아파지니 상하는 건들이지말자.*/
+
+    /* display: block; */
+}
+.parent {
+    border: 1px dotted rgb(255,0,255);
+
+    /* text-align: center; */
+}
+
+.parent > div {
+    border:1px solid red;
+    display:inline;
+    text-align:center;
+
+    /* inline은 공간이 없어서 내부 정령이라는게 없다.*/
+
+    width:100px;
+
+}
+
+.parent2 {
+    border : 1px solid aqua;
+    text-align: center;
+}
+
+.parent2 > div {
+    border:1px solid red;
+    display:inline-block;
+    width:100px;
+
+    height:50px;
+
+    margin:30px;
+    magoin: 0 auto;
+    /*
+    내 땅이 없어서 적용이 안됨
+    block만 됨.
+    */
+    padding:50px;
+}
+
+.parent3 {
+    border : 1px solid aqua;
+    font-size:0;
+}
+
+.parent3 > div {
+
+    font-size:16px;
+    border:1px solid red;
+    display:inline-block;
+    width:100px;
+
+    height:50px;
+    /*
+    내 땅이 없어서 적용이 안됨
+    block만 됨.
+    */
+    padding:50px;
+
+    vertical-align:top;
+    /* inline 또는 inline-block에서만 적용됨
+    세로방향정렬 가능*/
+}
+/* 
+.parent3 > div.right {
+    margin-left:-4px;
+
+    모바일에서도 적용이 되어 좋아보이지 않는다.
+} */
+
+
+.hide{
+    display: none;
+}
+
+.table{
+    dsiplay: table;
+}
+.table .td{
+    display: table-cell;
+    border:1px solid red;
+    height:100px;
+    vertical-align: top;
+}

@@ -1,0 +1,37 @@
+#top{
+    font-size: 0px;
+}
+
+#all{
+    background-color:gray;
+
+}
+.left{
+    /* border: 1px solid red;
+    불필요해짐 */
+    width:350px;
+    height:300px;
+    /* margin-bottom:20px; 
+    불필요한 마진바텀*/
+    display: inline-block;
+    /* padding-top: 200px;
+    불필요한 패딩 */
+}
+.right{
+    display: inline-block;
+    width:300px;
+    height:300px;
+    padding: 20px;
+    vertical-align: top;
+    /* margin-left: 20px; */
+}
+.left #black{
+    width:300px;
+    height:400px;
+    padding:25px;
+
+}
+.text{
+    padding: 20px;
+    font-size: 14px;
+}

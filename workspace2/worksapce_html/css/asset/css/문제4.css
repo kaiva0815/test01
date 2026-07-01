@@ -1,0 +1,64 @@
+*{
+    /* border: 1px  solid red; */
+}
+
+.main1 {
+    width: 500px;
+}
+
+#big {
+    border: 1px solid red;
+    text-align: center;
+    margin-top: 25px;
+}
+.left {
+    max-width: 50%;
+    max-height: 100%;
+    display: inline-block;
+    width: 500px;
+}
+.right {
+    max-width: 50%;
+    max-height: 100%;
+    display: inline-block;
+    width: 500px;
+}
+.main1 {
+    font-size: 3rem;
+    /* font-weight: 400; */
+
+}
+.gif {
+    /* padding: 30px; */
+    max-width: 100%;
+    /* height: 500px; */
+    background-image: url("https://kr.bandisoft.com/honeycam/howto/imgs/before.webp");
+    background-repeat: no-repeat;
+    padding-top: 200px;
+}
+.오른쪽본문 {
+    text-align: left;
+}
+
+.main2img {
+    width: 100%;
+    height: auto;
+
+}
+.main1to1, .main1, .main2to1{
+    text-align: left;
+}
+.nomal{
+    display: inline-block;
+}
+
+.left, .right{
+    /* margin: 55px; */
+    /* padding-top: 50px ; */
+    padding: 0 50px;
+    vertical-align: top;
+}
+
+.left1to2{
+    padding-right: 200px;
+}

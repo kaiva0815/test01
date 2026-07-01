@@ -1,0 +1,111 @@
+
+#all{
+    background-color: bisque;
+    text-align: center;
+}
+
+#내용 {
+    text-align: center;
+}
+.main {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+    .main a{
+        text-decoration-line :none;
+        color: black;
+    }
+    .dew a{
+        color: black;
+        text-decoration-color: red;
+    }
+    .dew a:hover{
+        /* text-decoration: none; */
+        text-decoration: underline;
+        text-decoration-color:blue;
+    }
+.last a{
+    text-decoration-line: none;
+    border-bottom: 1px solid black;
+    color: black;
+}
+    .last a:hover{
+        border-bottom: 1px solid red;
+    }
+    .last a:active{
+        border: 1px solid black;
+    }
+.money {
+    font-size: 1.5em;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: red;
+}
+.dew{
+    font-size: 14px;
+    margin-top: 20px;
+}
+.zero{
+    margin-top: 20px;
+}
+
+/* .img :active{
+            border:1px solid black;
+        }
+     */
+.main{
+    display: inline-block;
+}
+    .main :active{
+    border: 1px solid black;
+}
+.text{
+    /* font-size: 36px; */
+    font-size: 3rem;
+    margin-bottom: 0;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+    /* display: inline-block; */
+    text-align: center;
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-bottom: 20px;
+    padding-top: 60px;
+}
+
+.black{
+    width: 330px;
+    height: 250px;
+}
+.hentai{
+    width: 330px;
+    background-color: white;
+}
+
+
+.first{
+    height: 465px;
+    display: inline-block;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.up1{
+    /* margin-left: 50px; */
+    /* padding-left: 20px; */
+    display: inline-block;
+}
+/* 블랙에 링크 넣을것 */
+.black{
+    display: inline-block;
+
+}
+.dew :active{
+    border: 1px solid black;
+}
+.last{
+    color: black;
+    margin-top: 30px;
+    padding-bottom: 30px;
+}

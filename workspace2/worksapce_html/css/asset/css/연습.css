@@ -1,0 +1,53 @@
+.ektl{
+    /* background-color: brown; */
+}
+
+/*.all{
+    border: 1px solid red;
+    display:inline-block;
+    text-align: center;
+} */
+
+.no1 .tkwls{
+    border:1px solid blue;
+    height:100px;
+    width:100px;
+        display:inline-block;
+    /* display:inline-block; */
+    
+}
+
+.no2 .tkwls{
+    border:1px solid blue;
+    height:100px;
+    width:100px;
+        display:inline-block;
+}
+
+
+.no3 .tkwls{
+    border:1px solid blue;
+    height:100px;
+    width:100px;
+        display:inline-block;
+}
+
+
+.no4 .tkwls{
+    border:1px solid blue;
+    height:100px;
+    width:100px;
+        display:inline-block;
+} 
+
+/* 굳이 클래스 하나하나 입히는거보다 전체적인 틀을 잡고 사진과 글의 크기를 줄이는게 효율적으로 보임 */
+
+.xprtmxm{
+    font-size:10px;
+    width:125px;
+    border:1px solid green;
+        display:inline-block;
+}
+
+
+
