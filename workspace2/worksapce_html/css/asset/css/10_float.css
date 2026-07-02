@@ -1,0 +1,26 @@
+article img {
+    width: 100px;
+    float: right;
+}
+.box{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+}
+
+.left{
+    border-color: blue;
+}
+
+.box.left{
+    float: left;
+}
+
+/* float은 층이 하나 
+inline-block로 변함*/
+
+.box.right{
+    float:right;
+    border-color: green;
+}

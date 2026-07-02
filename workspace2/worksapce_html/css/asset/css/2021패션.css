@@ -1,0 +1,79 @@
+.left{
+    border: 1px solid red;
+    /* height: 800px; */
+    /* width: 800px; */
+    /* position: absolute; */
+
+    padding: 400px 600px;
+    background-color: white;
+    position: absolute;
+}
+.all{
+    /* display: inline-block; */
+}
+
+.사진{
+    position: absolute;
+    top:calc(50% - 300px / 2 );
+    left: 0;
+}
+
+.sun{
+    width: 400px;
+height: 300px;
+position: absolute;
+z-index: 1;
+top: 50%;
+left: 0;
+
+}
+.하얀색{
+    border: 1px solid red;
+    position: absolute;
+    display: inline-block;
+    background-color: white;
+    padding: 60px 15px;
+    text-align: right;
+    color: purple;
+    padding-left: 200px;
+    padding-right: 25px;
+    top: 0;
+    right: 0;
+    z-index: 2;
+}
+    .us{
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+    .패션{
+        font-size: 3rem;
+        width: 200px;
+        /* height: 400px; 
+        height 높이를 재는데 오히려 방해됨*/
+        /* margin-bottom: 50px; */
+    }
+    .free{
+        /* margin-bottom: 60px; */
+        
+    }
+.보라색{
+    background-color: purple;
+
+    padding: 400px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* .사진 img{
+    /* position: absolute; 
+}
+    불필요한것으로 판정
+*/
+
+/* .all{
+    position:absolute;
+} */
+
+.left{
+    /* overflow: hidden; 히든은 마지막에 줄것*/
+}

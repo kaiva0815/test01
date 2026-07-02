@@ -1,0 +1,63 @@
+.small7{
+    /* border: 1px solid red; */
+    display: inline-block;
+    /* position: relative; */
+    /* top: 17px; */
+    /* height: 300px; */
+    /* width: 550px; */
+}
+
+.big7{
+    /* display: inline-block; */
+    border: 1px solid blue;
+    position: absolute;
+    left: 75px;
+    top: 10px;
+    
+    /* position: absolute; */
+    
+}
+
+/* .bp{
+    margin-left: 75px;
+} */
+
+.sp{
+    border: 3px solid white;
+}
+
+/* .bp{
+     position: absolute; 
+    top: 0px;
+    border: 1px solid red;
+} */
+
+/* .세로칸{
+     display: inline-block; 
+} */
+
+.tp1:hover + .그림1{
+    z-index: 2;
+}
+.tp2:hover + .그림2{
+    z-index: 2;
+}
+.tp3:hover + .그림3{
+    z-index: 2;
+}
+.tp4:hover + .그림4{
+    z-index: 2;
+}
+.tp5:hover + .그림5{
+    z-index: 2;
+}
+.tp6:hover + .그림6{
+    z-index: 2;
+}
+.tp7:hover + .그림7{
+    z-index: 2;
+}
+
+.tp1{
+
+}
