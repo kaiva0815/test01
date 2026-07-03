@@ -1,0 +1,38 @@
+.all{
+    border: 1px solid red;
+    width: auto;
+    height: auto;
+}
+.left{
+    max-width: 200%;
+    min-width: 20%;
+    max-height:500%;
+    min-height: 20%;
+    height: 600px;
+}
+.찾기{
+    border: 1px solid red;
+}
+.채널내용{
+    border: 1px solid red;
+    /* display: inline-block; */
+}
+.호라{
+    width: 60vh;
+    border-radius: 5%;
+}
+.호라2{
+    max-width: 300px;
+    border-radius: 5%;
+}
+@media screen and (max-width:900px) 
+    {
+    .아래hola{display : none;}
+    .념글{display: none;}
+}
+.전체식품등{
+    border: 1px solid red;
+    display: flex;
+    /* flex-wrap:wrap ; */
+    justify-content: space-between ;
+}

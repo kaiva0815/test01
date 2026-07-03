@@ -24,3 +24,32 @@ inline-block로 변함*/
     float:right;
     border-color: green;
 }
+
+.clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.menu{
+    border: 1px solid red;
+    width: 100px;
+    height: 100px;
+    float: left;
+
+}
+.cp{
+    border: 1px solid red;
+        width: 200px;
+    margin: auto;
+    display: inline-block;
+}
+.rt {
+    border: 1px solid red;
+        width: 100px;
+    height: 100px;
+    float: right;
+}
+.시작{
+    text-align: center;
+}
