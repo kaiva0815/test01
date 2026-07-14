@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let i=1
+
+        // while(i<=10){
+        //     console.log(i)
+        //     i++
+
+        // }
+        // 횟수가 정해져있다면 포문 아니면 와일문
+
+        // 메뉴 입력 받기
+        // "1: 커피, 2: 홍차, 0:종료"
+        let menu = -1
+        // if (menu==1){
+        //     console.log(`커피드리겠습니다`)
+        // }else if(menu==2){
+        //     console.log(`홍자 드리겠습니다`)
+        // }else if(menu==0){
+        //     console.log(`종료하겠습니다`)
+        // }else {console.log(`다시 입력하세요`)}
+
+        // while(menu!=0){
+        //     menu=prompt(`1커피,2홍차,0종료`)
+        //     if (menu==1){
+        //     console.log(`커피드리겠습니다`)
+        // }else if(menu==2){
+        //     console.log(`홍자 드리겠습니다`)
+        // }else if(menu==0){
+        //     console.log(`종료하겠습니다`)
+
+        // }else {console.log(`다시 입력하세요`)}
+        // }
+
+        // do{
+        //     menu=prompt(`1커피,2홍차,0종료`)
+        //      if (menu==1){
+        //     console.log(`커피드리겠습니다`)
+        // }else if(menu==2){
+        //     console.log(`홍자 드리겠습니다`)
+        // }else if(menu==0){
+        //     console.log(`종료하겠습니다`)
+
+        // }else {console.log(`다시 입력하세요`)}
+        // } while(menu!=0)
+
+        // do - 일단 저지르고 마지막에 반복할지 말지 정한다
+
+        // 잔고 0 입금 얼마 하실건가요 창 나오기
+        // 출금-출금 얼마 하실건가요 창 나오기
+        // 잔액보기-현재 잔액 보기
+        // 종료
+        // 입,출금할때 음수 불가 잔액보다 큰 금액 불가능
+        // 소수점 자체의 진입을 차단하는 무언가가 필요 = 현재로썬 불가능
+
+
+        // let don = 10000
+        // let st=1
+        
+        // while(st===1){
+        //     qa=prompt('입금 출금 잔액보기 종료')
+        //     if(qa=='입금'){
+        //         zx=prompt('얼마를 입금하시겠습니까?')
+        //         zx=Number(zx)
+        //         if(zx>=0){
+        //             don+=zx
+        //             console.log('입금이 완료되었습니다')
+                    
+        //         }else if(zx<0){
+        //             console.log('0이하의 금액은 사용하실 수 없습니다.')
+
+        //         }else
+        //         {console.log('다시시도하시오')}
+        //                 }
+        //     if(qa=='출금'){
+        //         zx=prompt('얼마를 출금하시겠습니까?')
+        //         zx=Number(zx)
+        //         {
+        //             if(don>=zx){
+        //                 don-=zx
+        //                 console.log('출금이 완료되었습니다.')
+        //             }else if(don<zx){
+        //                 console.log('잔액보다 큽니다 다시 시도해주세요')
+        //             }
+        //         }
+        //     }
+        //     if(qa=='잔액보기'){
+        //         console.log(don)
+        //     }
+        //     if(qa=='종료')
+        //     {console.log('안녕하 가십시오')
+        //         break
+        //     }
+            
+                
+            
+        // }
+
+        // 완료
+
+        // 일단 string은 숫자 처리를 받으며 대문자와 소문자의 차이가 있다 왜인지 모름
+        // 입금을 처리한 이후 다른 else if들이 안씹히면서 종료까지 가게되는게 현재 문제
+        // 심지어 else if도 아닌 다른 if문의
+
+        //   while(menu!=0){
+        //     menu=prompt(`1커피,2홍차,0종료`)
+        //     if (menu==1){
+        //     console.log(`커피드리겠습니다`)
+        // }else if(menu==2){
+        //     console.log(`홍자 드리겠습니다`)
+        // }else if(menu==0){
+        //     console.log(`종료하겠습니다`)
+
+        // }else {console.log(`다시 입력하세요`)}
+        // }
+
+        //문제2
+        //주사위를 던져서 3이 나올 때 까지 반복하고 몇번만에 나왔는가를 출력 
+
+        // 모든 변수는 소문자로 시작한다.-tip
+
+        // 질문1. ()*6)+1을 하면 왜 7 이상이 안나오는가?
+        // rd = parseInt(Math.random()*6)+1
+        // console.log(rd)
+        let rd
+        let dc=2
+        let clo=0
+
+        while(dc==2){
+        rd = parseInt(Math.random()*6)+1
+        clo+=1
+        console.log(rd)
+        if(rd==3&&clo>20){
+            // clo-=1
+            console.log(`넌...그...아니다...`)
+            break
+        }
+        if(rd==3&&clo<20){
+            // clo-=1
+            console.log(`주사위 끝`,clo,`번만에 3이 나왔습니다.`)
+            break
+        }
+        }
+
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

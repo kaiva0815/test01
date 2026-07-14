@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        // 1단계
+        // +++++출력 for문을 써서
+        // console.log(`+++++`)
+        let string = ''
+        // string = string + '+'
+        for (let i = 1; i <= 5; i++) {
+            string = string + '+'
+        }
+        console.log(string)
+
+        // 2단계
+        //  +_+_+_
+        string = ''
+        let p = '+'
+        let m = '_'
+        for (let i = 1; i <= 5; i++) {
+            string += p
+            string += m
+        }
+        console.log(string)
+
+        string = ''
+        for (let j = 1; j <= 3; j++) {
+            string = ''
+            for (let i = 1; i <= 5; i++) {
+                string += p
+            } console.log(string)
+        }
+
+        // step 4
+        /*
+        11111
+        22222
+        33333
+        44444
+        55555
+        */
+        string = ''
+
+        for (let i = 1; i <= 5; i++) {
+            string = ''
+            for (let j = 1; j <= 7; j++) {
+                string = string + i
+            }
+
+            console.log(string)
+        }
+
+
+        //    5단계
+        string = ''
+        for (let i = 1; i <= 5; i++) {
+
+            string = ''
+            for (let a = 1; a <= i; a++) {
+                string = string + i
+
+            }
+            console.log(string)
+
+        }
+        // 피드백
+        // for문의 조건식에 변수가 꼭 하나씩만 있을 필요는 없다.
+        // 아니 모든 for문에 다 똑같이 적용될거같다
+        // 
+
+        let x = `+`
+        string = ''
+        for (let a = 1; a <= 5; a++) {
+            string = ''
+            for (let s = 1; s <= a; s++) {
+                string = string + x
+            }
+            console.log(string)
+        }
+
+
+        // 7단계
+        string = ''
+        let my = 2
+
+        // 55줄 만들고 아래서부터 갉아나가기
+        // 어떻게? 가로를 바치는 b를 깎아나가야하나? 그럼 위에서부터 깎이는데?
+        // 갉지를 말까? 처음 가로줄 만들때 갉아나가기?
+        // b는 5스타트가 기준이라 위 값인 a는 들어가지못함.
+        // 아 세로를 5를 주고 깎아야 하네
+        // 5 스타트는 의미가 없네 
+        // 그럼 가로를 깎아내야하는데 5가 지금 아래에 깔려있는 지금 5에서부터 스타트해서 깎아낸다면 될까?
+        // 가로축인 b를 두개 주고 하위문에서 깎아도 똑같네 아닌가?
+        // 5스타트로 1까지 깎는데 맞는데 5 4 3 2 1
+        // 깎아내는건 맞는데 왜 그 과정이 안보일까
+        // 아닌가 깎는건 정답이 아닌가? 더하는 과정은 
+        // 포문을 하나 더 줘서 b에서 1씩 빼야하나?
+        // 대전제, 세로a는 상관없음 내가 빼야하는건 가로축 b
+        // b를 5 스타트해서 1씩 깎아내리면 이상하리만큼 하나도
+        // 세로를 5로 스타트하니 스타트숫자가 5였다
+        // 가로를 바꿔?
+        // 가로b를 5로 잡고 1보다 작게 --를 했는데 왜 가로축이 안빠지지?
+        // a를 넣으면 결국 a가 5인 상태로 와서 빼봤자 의미가 없다 그렇다고 더하면 1이 1개만 나옴
+        // 너 뭐하는새끼야
+        // 아래서부터 갉아내는건 현재 내 지식으로 컴퓨터에게 지시는 불가능 그럼 위에서부터 깎아야한다
+        // 그래서 b에 5를 주고 1이 될때까지 1씩 마이너스를 했지만 왜인지 안먹힌다 근데 콘솔에선 작동을 한다
+        // 그냥 마이너스가 처음부터 없었던거처럼 왜?
+        // 표현을 안시켜서거나 표현 하라는게 잘못된건가?
+        // 현재 생각중인거
+        // b를 5로 주고 깎아 내릴때 왜 적용이 안되는가
+        // b안에 하위축이 되는 for문을 더 만들고 c를 넣어 b가 c의 이하가 될때까지 b에 마이너스를 주면
+        // 왜 윈도우가 팅기는가
+        // 난 시발 문제 하나로 몇시간을 잡아먹는가
+
+
+        let atob = `여기는7번문제`
+
+        console.log(atob)
+        // 세로     
+        for (let a = 1; a <= 5; a++) {
+            string = ''
+            // 가로
+            for (let b = 5; b >= a; b--) {
+                string = string + a
+            }
+            console.log(string)
+
+        }
+        string = ''
+        for (let i = 1; i <= 5; i++) {
+
+            string = ''
+            for (let a = 5; a >= i; a--) {
+                string = string + i
+
+            }
+            console.log(string, `dj?`)
+        }
+
+        // for(1번/2번/4번){3번}
+
+        // 1번은 깔고 가니 2번 조건을 보고 3번인 명령어가 발동됨
+        // 그리고 4번의 증강식을 발동시키고 다시 2번으로 감
+        // 
+
+
+        //  string=''
+        //     // 가로
+        //     for(let b=1; b<=5; b++){
+        //         string=string+1
+        //     }
+        //     console.log(string)
+
+        //          string=''
+        //     // 가로
+        //     for(let b=1; b<=4; b++){
+        //         string=string+2
+        //     }
+        //     console.log(string)
+
+        //          string=''
+        //     // 가로
+        //     for(let b=1; b<=3; b++){
+        //         string=string+3
+        //     }
+        //     console.log(string)
+        //          string=''
+        //     // 가로
+        //     for(let b=1; b<=2; b++){
+        //         string=string+4
+        //     }
+        //     console.log(string)
+        //          string=''
+        //     // 가로
+        //     for(let b=1; b<=1; b++){
+        //         string=string+5
+        //     }
+        //     console.log(string)
+        //                  string=''
+        //     // 가로
+        //     for(let b=1; b<=7; b++){
+        //         string=string+5
+        //     }
+        //     console.log(string)
+
+        string = ''
+        for (let i = 1; i <= 5; i++) {
+
+            string = ''
+            for (let a = 5; a >= i; a--) {
+                string = string + i
+
+            }
+            console.log(string)
+
+        }
+
+        string = ''
+        for (let i = 1; i <= 7; i++) {
+
+            string = ''
+            for (let a = 5; a >= 1; a--) {
+                string = string + i
+
+            }
+            console.log(string)
+        }
+
+        // ??? 이거 이론상 보면맞지않음?
+        // 가로축을 5로 시작해서 밑으로 갈수록 1씩 깎이면
+        // 하다못해 그 과정을 출력을 못하게 적용을 했다면 적어도 가로축이 싹다 사라져야하는게 맞지않아?
+
+
+        string = ''
+        for (let a = 1; a <= 5; a++) {
+            string = string + a
+            // 가로
+            for (let b = 5; b >= 1; b--) {
+                // string=string+a
+                // string=string+b
+                // string=''
+            }
+            console.log(string)
+
+        }
+
+        
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>

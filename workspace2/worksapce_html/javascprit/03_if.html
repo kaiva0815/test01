@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let value = false
+        
+        if(!value) {
+            // 블럭
+            console.log('이것은 true')
+        }
+
+        // if(작동여부){작동하는 값.}
+
+        let value2 = true
+        
+        if(value2) {
+            // 블럭
+        console.log('참')
+        }
+
+
+        let value3= true
+        
+        if(value3) {
+            // 블럭
+            console.log('참')
+        } else {
+            // else는 그밖에
+            console.log('거짓')
+        }
+
+        let score = 85
+        if(score>=60){
+            console.log('합격')
+        } else{
+            console.log('불합격')
+        }
+
+        // ex
+        // if(score<60){}
+        // if(!score>=60){}
+        
+        // if(score >=90 ){
+        //     console.log('A')
+        // } else {
+        //     if ( score >= 80) }
+        //         console.log('B')
+        //  else { 
+        //     console.log('C') }
+
+
+
+        if(score >=90) {
+            console.log('A')
+        } else if(score>= 80) {
+            console.log('B')
+        } else if (score>=70) {
+            console.log('C')
+        } else {
+            console.log('D')
+        }
+
+        /*
+        js에서
+        참(true)의 정의 : 거짓이 아닌 것.
+
+        거짓 : false, 0, undefind, null, NaN
+
+        */
+
+        let fruit = "apple"
+        if (fruit == 'apple') {
+            console.log('사과')
+        } else if(fruit == 'banana' ){
+            console.log('바나나')
+        } else {
+            console.log('모름')
+        }
+
+        switch(fruit){
+            case 'apple' :
+                console.log('사과2')
+                break
+            case 'banana' : 
+                console.log('바나나2')
+                break
+                default : console.log('모름2')
+                break
+        }
+
+        let phone = 's23'
+        // let phone= prompt('숫자를 입력하세요')
+        if (phone == 's24' ||
+            phone == 's25' ||
+            phone == 's26'
+        ) {console.log('삼성')
+
+        }
+        switch(phone){
+            case 's23':
+            case 's24':
+            case 's25':
+            case 's26':
+                console.log('삼성')
+                break
+            case 'i15':
+            case 'i16':
+            case 'i17':
+                console.log('애플')
+                break
+            default : console.log('삼성, 애플 아님')
+        }
+
+        // --다 풀수 있어야 한다
+        //문제1
+        //아무 숫자나 받아서 다음 형식으로 출력
+        // "양수" 또는 0또는 "음수"
+        // let no=prompt('숫자를 입력하시오')
+        // if (no > 0){
+        //     console.log('양수')
+        // } else if(no < 0 ) {
+        //     console.log('음수')
+        // } else {
+        //     console.log('0')
+        // }
+        // 완료
+
+
+        // 문제2
+        // 숫자를 받아서 다음 형식으로 출력
+        // "홀수" 또는 "짝수" 출력
+
+        // let go=prompt('숫자')
+        // if (go%2 > 0){
+        //     console.log('홀수')
+        // } else if(go%2===0) {
+        //     console.log('짝수')
+        // } 
+        // nef 완료
+
+
+        // 문제3
+        // 두 수를 받아서
+        // 둘 중에 큰 값을 출력
+        // 3과 5중에 큰수 : 5
+
+        // let asb = prompt('첫번째 숫자')
+        // let asbr = prompt('두번째 숫자')
+
+        // if (asb>asbr) { 
+        //     console.log(asb)
+        // } else if (asb<asbr) {
+        //     console.log(asbr)
+        // } else console.log('같음')
+
+        // 완료 질문-콘솔 로그에 나오는 값이 글자일경우 뒤에있는 asbr만 나옴 이유를 모르겠음
+
+        // 문제4
+        // 임의의 money가 있을 때
+        // 7000원 이상이면 "택시타자" 출력
+        // 7000원 미만 ~ 3000원 이상이면 "버스타자"
+        // 3000원 미만이면 "걸어가자"
+
+        // let money=prompt('얼마 있나요')
+        // if (money>=7000){
+        //     console.log('택시타자')
+        // } else if(money>=3000){
+        //     console.log('버스타자')
+        // } else{
+        //     console.log('걸어가자')
+        // }
+        
+        // 완료
+
+
+        // --도전
+        // 문제5
+        // '가위' '바위' '보' 중에 하나만 입력
+        // 문제5-1
+        // 컴퓨터는 항상 '바위'만 내는 경우
+        // 문제5-2
+        // 이겼다 졌다 비겼다 출력
+
+        let rock=prompt('가위 바위 보 중에 입력하시오')
+        if (rock==='가위'){
+            console.log('패배')
+        } else if(rock==='바위'){
+            console.log('비김')
+        } else if(rock==='보'){
+            console.log('승리')
+        } else console.log('f5를 눌러 다시 시도하시오.')
+
+        // 완료 질문-가위바위보 이외의 다른 것이 입력될경우 다시 입력시키고 싶으면 어떻게하나요
+
+        // 문제6
+        // 임의의 수 3개를 받음 x, y, z
+        // z가 x와 y사이에 있는지 판단
+
+        // let x = prompt('x값을 입력하시오')
+        // let y = prompt('y값을 입력하시오')
+        // let z = prompt('z값을 입력하시오')
+
+        // ex= x 11 y 13 z 14면
+        // 사이에 있지 않음. 그러러면 어떻게?
+        // if (z>y||z>x)가 맞는가 맞네
+
+        // if(z<=x&&z>=y){
+        //     console.log('사이에 있다.')
+        // }else if(z>=x&&z<=y){
+        //     console.log('사이에 있다.')
+        // }else{
+        //     console.log('사이에 있지 않다.')
+        // }
+
+        // and문 && / or 문 || / not문 !
+
+        // x=9 y=1 z=5면 사이에 있음
+        // x=9 y=50 z=15면 사이에 있음
+        // x=5 y=5 z=1이면 사이에 없는데?
+        // x=9 y=10 z=9.5
+        
+
+
+        // 문제7
+        // 月을 입력 받아서 계절 출력
+        // 단, 13이나 -1같은걸 받으면 "다시 입력하세요" 출력
+        // let suwal=prompt('지금은 몇월입니까')
+        // switch(suwal){
+        //     case '12': 
+        //     case '1': 
+        //     case '2':
+        //         console.log('겨울입니다')
+        //         break
+        //     case '3' :
+        //     case '4' :
+        //     case '5' :
+        //         console.log('봄입니다')
+        //         break
+        //     case '6' :
+        //     case '7' :
+        //     case '8' :
+        //         console.log('여름입니다.')
+        //         break
+        //     case '9' :
+        //     case '10' :
+        //     case '11' :
+        //         console.log('사라질 가을입니다.')
+        //         break
+        //         default : console.log('다시 입력하세요')
+        // }
+
+        // 완료 피드백-콘솔로그를 입력하지 않으면 출력이 안됨
+
+
+
+        // 문제8
+        // 온도를 입력받아 다음처럼 출력
+        // 예: 32 입력
+        // "영상 32도 입니다"
+        // 예: -3 입력
+        // "영하 3도 입니다"
+
+        let on=prompt('온도 입력')
+        if(on >=0){
+            console.log(`영상`,on,`도 입니다.`)
+        } else if (on < 0) {
+            console.log(`영하`,on ,`도 입니다.`)
+        } else console.log ('숫자로 입력하세요')
+
+        // 완료
+
+        // 멘탈 챙길 자신 있음 9부터 도전
+        // 문제9
+        // 시와 분을 입력 받아서 35분 후의 시간 출력
+        // 3, 51 입력
+        // 출력 : 4시 26분
+        // let time = prompt(`시간을 입력해주세요`)
+        // let min = prompt(`몇분인가요`)
+        // 60진법 등 진법에 대한 문제
+
+
+        // 문제 10
+        // 두자리 숫자를 받아서
+        // 10의 자리와 1의 자리가 같은지 판단
+        // 예:88 => 같음, 89=>다름
+
+        // 서로 같은 두자리수는 11의 배수라서 11로 나누어 남는게 없음
+        // %11로 남는게 없으면 같음을 출력 있으면 다름을 출력할것.
+        // 두자릿수 이상이기에 100이상에 두자리수로 출력하라 할것
+
+        // 문제11
+        // 369게임
+        // 어떤 수를 받아서 3,6,9가 있으면 "박수" 출력
+        // 없으면 그 숫자 출력
+        // 예시:31 =>박수 12=>숫자출력
+
+        // 문제 12
+        // 사각형에서 
+        // 좌 상단 좌표가 x1:10, y1:20
+        // 우 하단 좌표가 x2:90, y2:100
+        // 입력 받은 좌표가 사각형에 겹치는가?
+
+        let rand = Math.random()
+        console.log(`일반랜덤`,rand)
+
+        // 0 <= 숫자 < 1
+        rand = parseInt(Math.random() * 10)%3
+        console.log(rand)
+
+        // mix, max
+
+        //  0~2
+
+        // let min = 0
+        let max = 2
+
+        Math.random() * 3
+
+        min = 1
+        max = 45
+
+        min=5
+        max=8
+
+
+        parseInt(Math.random() * (max - min +1)) + min
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

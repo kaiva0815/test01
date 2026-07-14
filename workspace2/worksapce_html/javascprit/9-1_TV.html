@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // TV 만들기
+        // 채널은 0부터 10번까지만
+        // 볼륨은 5까지만
+        // -10 일때 uo을 누르면 0번으로 돌아가기
+        // 0일때 10번으로 down 누르면 10번으로 돌아가기
+
+        // 전원버튼
+        
+        // 사운드 up 
+        // 사운드 down
+        // 채널 up 
+        // 채널 down
+        // 채널 (직접입력)
+        // mute on/off
+
+        let power = false //전원 상태 저장
+        let lastCh = 10
+        const CH_MAX=10
+        const CH_MIN = 0
+        let sound = 0
+        const SD_MAX = 5
+        const SD_MIN = 0
+        let mute = false
+        function powerOn() {
+            power = true
+            console.log("TV켜짐")
+
+        }
+
+        function powerOff() {
+            power = false
+            console.log("TV꺼짐")
+        }
+        function channel(ch) {
+            if(power==true){
+                if(ch < CH_MIN|| ch >CH_MAX){
+                    console.log("채널이 없습니다.")
+                    console.log("현재 채널은",lastCh,"입니다")
+                    return
+                }
+                lastCh = ch
+                console.log(ch+"번으로 채널변경")
+            }else{ 
+                console.log("전원 꺼져있음")
+            }
+        } 
+
+        function channelUp(){
+            if(power==true){
+                lastCh++
+                if(lastCh >CH_MAX){
+                    lastCh = CH_MIN
+                    console.log("채널이 없습니다.")
+                    console.log("현재 채널은", lastCh, "입니다")
+                    
+                    return
+                }
+                else if(lastCh < CH_MAX ){
+                    // lastCh = ch
+                    
+                    console.log(lastCh+1 ,'로 변경됨')
+                
+                }
+                // console.log(++lastCh,'로 변경됨')
+            }
+            if(power==false) {
+                console.log('전원 꺼져있음')
+            }
+
+        }
+
+
+        function channeldown(){
+            if(power==true){
+                lastCh--
+                if(lastCh < CH_MIN){
+                    lastCh = 10
+                    console.log("채널이 없습니다.")
+                    console.log("현재 채널은", lastCh, "입니다")
+                }
+                // console.log(--lastCh,'로 변경됨')
+            else if(lastCh > CH_MIN){
+            console.log("현재 채널은", lastCh, "입니다")
+
+
+            }
+        }
+
+            if(power==false){
+                console.log('전원 꺼져있음')
+            }
+
+        }
+
+        function soundUp(){
+            if(power==true){
+                if(sound>=SD_MAX){
+                    console.log("최대 사운드입니다")
+                } 
+                else if(sound<SD_MAX&&mute==true){
+                   mute=false
+                   sound++
+                   console.log("mute 해제")
+                   console.log("현재 볼륨",sound)
+                }
+                else if(sound<SD_MAX){
+                    
+                    sound++
+                    console.log("현재 볼륨",sound)
+                }
+            }
+            if(power==false){
+                console.log('전원 꺼져있음')
+            }
+        
+        }
+        function soundDown(){
+            if(power==true){
+                if(sound<=SD_MIN){
+                    console.log("최소 사운드입니다")
+                }else if(sound>SD_MAX&&mute==true){
+                    console.log("mute 해제")
+                    mute=false
+                    sound--
+                    console.log("현재 볼륨",sound)
+            }
+                else if(sound>SD_MAX){
+                    mute=false
+                    sound--
+                    console.log("현재 볼륨",sound)
+                }
+            if(power==false){
+                console.log('전원 꺼져있음')
+            }
+        }
+    }
+
+        function muteall() {
+            if(power==true){
+            if(mute==false){
+                console.log("뮤트 모드입니다")
+                mute = true
+
+            }else if(mute==true){
+                console.log("이제 뮤트가 아닙니다")
+                mute = false
+            }
+        } if(power==false){
+            console.log("전원 꺼져있음")
+        }
+        }
+
+        // let mute
+
+
+        // 볼륨 5 최초 0
+        // 최대5 최소 0
+        // 5일때 up 누르면 5 고정
+        // 0일때 down 누르면 끝
+        // 음소거
+        // function mute = () {
+            // Toggle : 실험 할 때 마다 상태 반전
+
+            // toggle 함수
+            // 지금 음소거 상태라면 볼륨 0
+            // 음소거를 해제하면 기존볼륨으로 돌아감
+        // }
+        // powerOff
+
+        // powerOn()
+        // muteall()
+        // soundUp()
+        // soundUp()
+        // soundUp()
+        // soundUp()
+        // soundUp()
+        // soundUp()
+        // muteall()
+        // soundUp()
+        // muteall()
+        // soundDown()
+        // muteall()
+        // muteall()
+        // soundDown()
+        // soundUp()
+        // powerOn()
+        // muteall()
+        // soundUp()
+        // muteall()
+
+        // 피드백 : 테스트도 계획을 짜고 신중하게 할것.
+        
+
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
