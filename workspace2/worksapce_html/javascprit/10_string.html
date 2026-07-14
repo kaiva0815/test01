@@ -42,6 +42,7 @@
         // 구분자로 배열을 돌려준다.
         console.log( str. split(' '))
 
+
         // substring
         let s = str.substring(3, 6)
         console.log(str)
@@ -68,21 +69,18 @@
         // @앞에만 출력해서 console.log에 출력하면 될듯
         // @까지는 0~6 @포함시 7
         // 질문 1. 이메일 @ 주소.com 일때 이메일의 아이디 
+        // @를 찾아서 값을 추출하고
+        // 추출한 값을 기준으로 앞에 있는 글들만 출력하기
 
 
         // 예시용 아이디 pm24513@naver.com
 
-        const mail="pm24513@naver.com"
-        console.log(mail)
-        let x = "@"
+        let mail="pm24513@naver.com"
 
-        mail.indexOf("@",x)
-        console.log(x,"x값")
-
-
-
-        console.log(mail.length)
-        console.log(mail.substring(7,-7))
+        let gol=mail.indexOf('@')
+        console.log(gol, '@의 위치') //@의 위치를 체크함
+        let realmail=mail.substr(0,gol)
+        console.log(realmail)
 
         // let mail2 = mail.filter(function(7,0,0){
         //     return 7.length>=7
@@ -101,34 +99,104 @@
 
         //예시용 주민번호 121212-1234567
 
-        let min="121212-1234567"
+        let min="121212-2234567"
 
         console.log(min)
 
 
         // let re = min.substr(7,7)
 
-        let sex = console.log(min.substr(7,1))
-        sex = Number(sex)
+        let sex = min.substr(7,1)
+
+
         if (sex %2>0){
             console.log("남자")
         }else console.log("여자")
 
 
         // 문제 3
-        // "2026-07-24 12-43:19"
+        // "2026-07-24 12:43:19"
         // 월, 분 구하기
+        // substring으로 구역을 나누어 보자 아님
+        // split으로 구분하기
+        // 구분까지는 했음 이후 월과 분을 나누어야 하는데 솔직히 자릿수도 정해져잇어서 쉬움
+        // 일단 월 과 분을 하나씩 구해놨음 이제 이 값만 빼내서 콘솔로그로 올려야함
+        // let으로 빼내서 0 1 2 에서 1에 해당하는 분 월을 콘솔로그에 올리기
+
+
+        let pb1="2026-07-24 12:43:19"
+
+
+        console.log(pb1)
+        let pb1_1=pb1.split('-') // pb1_1는 월
+        console.log(pb1_1)
+             let dap1=pb1_1.slice(1,2)
+        console.log(dap1)
+
+        let pb1_2=pb1.split(':') //pb1_2은 분
+        console.log(pb1_2)
+            let dap2=pb1_2.slice(1,2)
+            console.log(dap2)
+            console.log(dap1,dap2)
+
+
+
 
         // -----------------------------------
 
         // 문제4 보안상 당첨 이메일을 가려서 출력.
         //  id24513@naver.com >> id****3@naver.com
-        // 문제 4 앞 두글자만 제대로 표시 후 *표 4개 표시하고 @부터 다
+        // 이메일의 2~6까지 싹다 *로 치환하면 됨
+        // for 문을 이용
+        // 자릿수를 변수로 만들고 해당 변수가 4==될때까지 반복문을 씀
+        // +1을 계속 넣음
+
+        
+        
+
+        let pbmail = 'id24513@naver.com'
+        let 메일변수 = pbmail.slice(2,6)
+        let gol1 = pbmail.indexOf('@')
+        // // console.log(gol1)
+        let 변수 = pbmail.replace(pbmail.slice(2,6),"****")
+        console.log(pbmail.replace(pbmail.slice(2,6),"****"), "음")
+
+
+
+        let 공백1 = ''
+        if (gol1!=-1){
+            공백=pbmail.slice(0,2)
+        }
+        let 치환값=' '
+        for (let idal=0;idal>3;idal++){
+            치환값+="*"
+        }
+        console.log(공백,치환값)
+        // console.log(변수)
+
+        // console.log(asdf)
+        // asdf = "****"
+        // // console.log(asdf)
+        // // let dapji=pbmail.indexOf(asdf)
+        // // console.log(dapji)
+        // if (pbmail.slice(2,6)){
+        //     console.log
+        // }
+        // function 네번째문제(){
+        //     for(변수=0; 변수==4; 변수++){
+                
+        //     }
+            
+
+        // }
+        
+
+
 
         // 문제 5
         // 앞 두글자만 제대로 표시하고 *표는 가려진 갯수만큼
         // youth@naver.com >> yo***@naver.com
-        let email = 'youth@naver.com'
+        let email = 'id24513@naver.com'
         // let id = email.split('@')
         let pos=email.indexOf('@')
         let id = ' '
@@ -142,6 +210,13 @@
             mask_id_2 += "*"
         }
         console.log(mask_id_1 + mask_id_2)
+
+        let 뒷문장=email.split('@')
+        console.log(뒷문장)
+        let dap123=console.log(뒷문장.slice(1))
+        console.log(mask_id_1 + mask_id_2+"@"+ 뒷문장.slice(1,2))
+        // console.log(dap123)
+
 
 
 
