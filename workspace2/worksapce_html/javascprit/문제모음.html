@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <table border=1>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <table border=1>
+        <thead>
+            <tr>
+                <th>제목</th>
+                <th>작성자</th>
+            </tr>
+        </thead>
+        <tbody id="borad">
+            <!-- <table border=1>
+                <tr>
+                    <th>제목</th>
+                    <th>작성자</th>
+                </tr>
+            </table> -->
+            
+        </tbody>
+        </table>
+</head>
+<body>
+<script>
+
+    const rows =
+    [
+        ['제목1','작성자1'], 
+        ['제목2','작성자2'],
+        ['제목3','작성자3'],
+        ['제목4','작성자4'],
+        ['제목5','작성자5']
+    ]
+    // 위에 배열은 0(0,0) 0(0,1)
+    // 위에 배열은 0(1,0) 0(2,1) 이런식으로 바뀐다
+    // 저 제목과 작성자를 위에 thead안에 있는 제목과 작성자 밑에 붙히려고 한다
+    // 붙히려면 일단 테이블아래에 붙힐 값이 필요하다
+    // a(b,c)으로 시작하니 필요한 칸은 약 3개
+    // a를 부모로 주고 bc를 a에 자식으로 준다
+    // 그리고 주르륵 출력 시키려면 위의 방식을 반복시켜야한다.(for문)
+    // 처음부터 하려면 일단 만들어봐
+    
+    // let as1=document.createElement('tr')
+    // let as2=document.createElement('td')
+    // let as3=document.createElement('td')
+    // 위에 값은 as1에 tr값을 as2,3에 td값을 주었다
+    // a는 as1 b,c는 as2,3
+    // 이제 append로 주자
+    // as1.append('as2')
+    // as1.append('as3')
+    // 이러면 as1은 어디에 붙혀야 하는가?
+    // 맨 위에 있는 id
+    //borad.append('as1')
+    // 변수인데 이러면 안되지않나?
+    let as1=''
+    let as2=''
+    let as3=''
+    let bd = document.querySelector('#borad')
+
+    // 위에 식을 쓰면 bd에 borad값이 적용되었고
+    // bd에 이제 넣으면 된다
+    // 이제 as2,3의 부모인 as1을 bd에 넣자
+    // bd.append('as1')
+
+    for(let p=0; p<5; p++){
+        as1=document.createElement('tr')
+        as2=document.createElement('td')
+        as3=document.createElement('td')
+        bd.append(as1)
+        as1.append(as2)
+        as1.append(as3)
+
+        as2.append(rows[p][0])
+        as3.append(rows[p][1])
+    }
+
+    // const dice = Math.floor(Math.random() * 45) + 1;
+
+    // for(let i=0; i<6;i++){
+        //     // const dice = Math.floor(Math.random() * 45) + 1;
+        //     // rodo[i] += dice
+        
+        //     // console.log(rodo[i])
+        //     if (rodo[i]!==rodo){
+            //         //  const dice = Math.floor(Math.random() * 9) + 1;
+            //     rodo[i] += dice
+            
+            //     }
+            // }console.log(rodo)
+            
+            
+            // for(let d=0; d<6;d++){
+                
+            //     don[d] += dice
+            // }console.log(don)
+            const dice = Math.floor(Math.random() * 45) + 1;
+                let rodo=['','','','','','']
+                let don=['','','','','','']
+           let a = '' 
+    for(a=0; a<6; a++){
+        // if(rodo[a]!==don[a]){}
+            rodo[a]+=dice
+            don[a]+=dice
+    for(let s=0 ;rodo[a]!==rodo[a>5]; s++){ 
+        console.log(rodo[a]!==don[a])
+        console.log(rodo)
+        if(s<6){break}
+        }
+    }
+    // console.log(rodo)
+        
+        // console.log(rodo[i])
+        // } console.log(rodo)
+        
+
+    // 여기서 주사위값이 서로 달라야한다.
+    // 주사위값을 어딘가에 저장을 해야하나?
+    // 저장한다고 쳐도 서로 다른값으로 어떻게 if문을 붙히지?
+    // 반복을 안시키려면 a와 b의 값이 달라야함
+    // 그리고 반복문으로 a!=b!=c가 가능해짐
+    // 로또번호안에 주사위 값을 넣으면 된다
+    // 중복 부정문을 어떻게 할것인가가 문제
+    // 일단 용지안에 주사위 값을 넣자
+    // 현재 주사위는 굴러서 rodo에는 들어감
+    // rodo배열에 중복 부정을 써야함
+    // if rodo가 배열과 같은 수가 있을경우
+
+    // for 안에 while문
+    // while (rodo[a]!==don[a]){console.log(rodo)}
+
+
+    
+    
+
+
+    </script>
+</body>
+</html>

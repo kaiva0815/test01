@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Human Academy</title>
+
+
+<style>
+
+/* =====================
+   RESET
+===================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+body{
+
+    font-family:"Pretendard",Arial,sans-serif;
+    color:#222;
+
+}
+
+
+
+
+/* =====================
+   TOP MENU
+===================== */
+
+
+.top-area{
+
+    height:40px;
+
+    background:#f7f7f7;
+
+    border-bottom:1px solid #eee;
+
+}
+
+
+.top-inner{
+
+    width:1200px;
+
+    max-width:90%;
+
+    height:100%;
+
+    margin:auto;
+
+    display:flex;
+
+    justify-content:flex-end;
+
+    align-items:center;
+
+}
+
+
+
+.top-inner ul{
+
+    display:flex;
+
+    gap:25px;
+
+    list-style:none;
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+
+
+
+
+
+
+/* =====================
+   HEADER
+===================== */
+
+
+.header{
+
+
+    height:90px;
+
+    width:1200px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+
+}
+
+
+
+
+.logo{
+
+
+    font-size:32px;
+
+    font-weight:900;
+
+    color:#1d4ed8;
+
+
+}
+
+
+.logo span{
+
+
+    display:block;
+
+    font-size:14px;
+
+    letter-spacing:3px;
+
+    color:#555;
+
+
+}
+
+
+
+
+
+.nav{
+
+
+    display:flex;
+
+    gap:35px;
+
+
+}
+
+
+
+.nav a{
+
+
+    text-decoration:none;
+
+    color:#222;
+
+    font-weight:600;
+
+
+}
+
+
+
+
+.header-right button{
+
+
+    background:#1d4ed8;
+
+    color:white;
+
+    border:0;
+
+    padding:14px 28px;
+
+    border-radius:30px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   HERO
+===================== */
+
+
+.hero{
+
+
+    height:520px;
+
+
+}
+
+
+
+
+.hero-bg{
+
+
+    height:100%;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    padding-left:10%;
+
+
+    color:white;
+
+
+    background:
+
+    linear-gradient(
+
+    120deg,
+
+    #111827,
+
+    #2563eb
+
+    );
+
+
+}
+
+
+
+
+.hero-content h1{
+
+
+    font-size:56px;
+
+    line-height:1.3;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+.hero-content p{
+
+
+    font-size:20px;
+
+    line-height:1.6;
+
+    margin-bottom:35px;
+
+
+}
+
+
+
+
+.hero-buttons button{
+
+
+    padding:15px 35px;
+
+    border-radius:30px;
+
+    border:0;
+
+    margin-right:10px;
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+.primary{
+
+
+    background:white;
+
+    color:#2563eb;
+
+
+}
+
+
+
+.secondary{
+
+
+    background:transparent;
+
+    color:white;
+
+    border:1px solid white !important;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   SERVICE TITLE
+===================== */
+
+
+.service-header{
+
+
+    text-align:center;
+
+    padding:80px 0 40px;
+
+
+}
+
+
+
+.service-header h2{
+
+
+    font-size:40px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.service-header p{
+
+
+    color:#777;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   SERVICE CARD
+===================== */
+
+
+.service{
+
+
+    background:#f8fafc;
+
+    padding:40px 0 100px;
+
+
+}
+
+
+
+
+.service-wrap{
+
+
+    width:1200px;
+
+    max-width:90%;
+
+    margin:auto;
+
+    display:flex;
+
+    gap:30px;
+
+
+}
+
+
+
+
+
+.service-card{
+
+
+    flex:1;
+
+    background:white;
+
+    padding:45px 35px;
+
+    border-radius:20px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+    cursor:pointer;
+
+
+}
+
+
+
+.service-card:hover{
+
+
+    transform:translateY(-10px);
+
+
+    box-shadow:
+
+    0 20px 40px rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+.service-icon{
+
+
+    width:70px;
+
+    height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#eff6ff;
+
+    font-size:35px;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+.service-card h3{
+
+
+    font-size:25px;
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+.service-card p{
+
+
+    color:#666;
+
+    line-height:1.7;
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+.service-card a{
+
+
+    color:#2563eb;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   MOBILE
+===================== */
+
+
+@media(max-width:768px){
+
+
+    .top-inner ul{
+
+        display:none;
+
+    }
+
+
+
+    .nav{
+
+        display:none;
+
+    }
+
+
+
+    .hero-content h1{
+
+        font-size:38px;
+
+    }
+
+
+
+    .service-wrap{
+
+        flex-direction:column;
+
+    }
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+<!-- TOP MENU -->
+
+<div class="top-area">
+
+
+<div class="top-inner">
+
+
+<ul>
+
+<li>국비지원과정</li>
+
+<li>취업지원센터</li>
+
+<li>지점안내</li>
+
+<li>상담센터</li>
+
+<li>교육원소개</li>
+
+</ul>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<!-- HEADER -->
+
+
+<header class="header">
+
+
+<div class="logo">
+
+HUMAN
+
+<span>
+ACADEMY
+</span>
+
+</div>
+
+
+
+<nav class="nav">
+
+
+<a href="#">교육과정</a>
+
+<a href="#">국비지원</a>
+
+<a href="#">취업지원</a>
+
+<a href="#">프로젝트</a>
+
+<a href="#">커뮤니티</a>
+
+
+</nav>
+
+
+
+
+<div class="header-right">
+
+
+<button>
+
+상담신청
+
+</button>
+
+
+</div>
+
+
+</header>
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="hero-bg">
+
+
+<div class="hero-content">
+
+
+<h1>
+
+미래를 준비하는<br>
+
+실무 중심 IT 교육
+
+</h1>
+
+
+
+<p>
+
+국비지원부터 취업까지<br>
+
+전문 교육 시스템
+
+</p>
+
+
+
+<div class="hero-buttons">
+
+
+<button class="primary">
+
+교육과정 보기
+
+</button>
+
+
+
+<button class="secondary">
+
+무료 상담
+
+</button>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- SERVICE TITLE -->
+
+
+<section class="service-header">
+
+
+<h2>
+
+무엇을 찾으세요?
+
+</h2>
+
+
+
+<p>
+
+주요 서비스를 빠르게 확인하세요
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- SERVICE -->
+
+
+<section class="service">
+
+
+<div class="service-wrap">
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+
+💬
+
+</div>
+
+
+
+<h3>
+
+온라인 상담
+
+</h3>
+
+
+
+<p>
+
+교육 과정 및 취업 상담을<br>
+
+빠르게 받아보세요.
+
+</p>
+
+
+
+<a href="#">
+
+상담 신청 →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+
+📍
+
+</div>
+
+
+
+<h3>
+
+지점 안내
+
+</h3>
+
+
+
+<p>
+
+가까운 교육센터 위치와<br>
+
+시설 정보를 확인하세요.
+
+</p>
+
+
+
+<a href="#">
+
+지점 보기 →
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="service-icon">
+
+✓
+
+</div>
+
+
+
+<h3>
+
+국비 가능 조회
+
+</h3>
+
+
+
+<p>
+
+내일배움카드 및<br>
+
+지원 가능 여부 확인
+
+</p>
+
+
+
+<a href="#">
+
+조회하기 →
+
+</a>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+// 상담 버튼
+
+document
+.querySelector(".header-right button")
+.addEventListener("click",()=>{
+
+alert("상담 신청 페이지 이동");
+
+});
+
+
+
+
+// 교육과정 버튼
+
+document
+.querySelector(".primary")
+.addEventListener("click",()=>{
+
+alert("교육과정 페이지 이동");
+
+});
+
+
+
+
+// 무료 상담 버튼
+
+document
+.querySelector(".secondary")
+.addEventListener("click",()=>{
+
+alert("온라인 상담 페이지 이동");
+
+});
+
+
+
+
+// 서비스 카드
+
+document
+.querySelectorAll(".service-card a")
+.forEach(item=>{
+
+
+item.addEventListener("click",(e)=>{
+
+
+e.preventDefault();
+
+
+alert("서비스 페이지 이동");
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+    
+</body>
+</html>

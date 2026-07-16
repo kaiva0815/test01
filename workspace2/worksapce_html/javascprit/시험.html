@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+    </script>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="ko">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Future Academy</title>
+
+
+<style>
+
+/* =====================
+   기본 설정
+===================== */
+
+*{
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Pretendard", Arial, sans-serif;
+
+}
+
+
+body{
+
+color:#222;
+background:white;
+
+}
+
+
+
+/* =====================
+   HEADER
+===================== */
+
+
+.header{
+
+height:80px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:0 8%;
+
+background:white;
+
+position:sticky;
+
+top:0;
+
+z-index:100;
+
+box-shadow:
+0 3px 15px rgba(0,0,0,.08);
+
+}
+
+
+
+.logo{
+
+font-size:28px;
+
+font-weight:800;
+
+color:#2563eb;
+
+}
+
+
+
+.menu a{
+
+margin:0 18px;
+
+text-decoration:none;
+
+color:#333;
+
+font-weight:500;
+
+}
+
+
+
+.consult-btn{
+
+
+background:#2563eb;
+
+color:white;
+
+border:0;
+
+padding:13px 25px;
+
+border-radius:30px;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+/* =====================
+   HERO
+===================== */
+
+
+.hero{
+
+
+height:520px;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+padding-left:10%;
+
+
+background:
+
+linear-gradient(
+135deg,
+#0f172a,
+#2563eb
+);
+
+
+color:white;
+
+
+}
+
+
+
+
+.hero-content h1{
+
+
+font-size:58px;
+
+line-height:1.25;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+.hero-content p{
+
+
+font-size:20px;
+
+margin-bottom:40px;
+
+opacity:.9;
+
+
+}
+
+
+
+.hero-btn{
+
+
+padding:16px 35px;
+
+border-radius:30px;
+
+border:0;
+
+background:white;
+
+color:#2563eb;
+
+font-size:16px;
+
+font-weight:bold;
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+
+
+/* =====================
+   FIND SERVICE
+===================== */
+
+
+.find-service{
+
+
+text-align:center;
+
+padding:70px 20px 40px;
+
+
+}
+
+
+
+.find-service h2{
+
+
+font-size:38px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+.find-service p{
+
+
+color:#777;
+
+font-size:18px;
+
+
+}
+
+
+
+
+
+/* =====================
+   SERVICE CARD
+===================== */
+
+
+.services{
+
+
+padding:30px 10% 100px;
+
+background:#f8fafc;
+
+
+}
+
+
+
+
+.service-container{
+
+
+display:flex;
+
+gap:30px;
+
+justify-content:center;
+
+
+}
+
+
+
+.service-card{
+
+
+width:330px;
+
+
+background:white;
+
+
+padding:40px 30px;
+
+
+border-radius:25px;
+
+
+text-align:center;
+
+
+box-shadow:
+
+0 10px 30px rgba(0,0,0,.08);
+
+
+transition:.3s;
+
+
+}
+
+
+
+
+.service-card:hover{
+
+
+transform:translateY(-10px);
+
+
+box-shadow:
+
+0 20px 40px rgba(0,0,0,.15);
+
+
+}
+
+
+
+
+.icon{
+
+
+font-size:55px;
+
+margin-bottom:20px;
+
+
+}
+
+
+
+
+.service-card h3{
+
+
+font-size:25px;
+
+margin-bottom:15px;
+
+
+}
+
+
+
+
+.service-card p{
+
+
+color:#666;
+
+line-height:1.6;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+.service-card button{
+
+
+padding:12px 25px;
+
+
+border-radius:25px;
+
+
+border:0;
+
+
+background:#2563eb;
+
+
+color:white;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+
+
+
+/* =====================
+   MOBILE
+===================== */
+
+
+@media(max-width:768px){
+
+
+.menu{
+
+display:none;
+
+}
+
+
+
+.hero{
+
+
+height:450px;
+
+padding:30px;
+
+
+}
+
+
+
+.hero-content h1{
+
+
+font-size:38px;
+
+
+}
+
+
+
+.service-container{
+
+
+flex-direction:column;
+
+align-items:center;
+
+
+}
+
+
+
+.service-card{
+
+
+width:90%;
+
+
+}
+
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+
+<!-- HEADER -->
+
+
+<header class="header">
+
+
+<div class="logo">
+
+Future Academy
+
+</div>
+
+
+
+<nav class="menu">
+
+
+<a href="#">
+교육과정
+</a>
+
+
+<a href="#">
+취업지원
+</a>
+
+
+<a href="#">
+국비지원
+</a>
+
+
+<a href="#">
+커뮤니티
+</a>
+
+
+</nav>
+
+
+
+
+<button class="consult-btn">
+
+상담하기
+
+</button>
+
+
+
+</header>
+
+
+
+
+
+
+
+<!-- HERO -->
+
+
+<section class="hero">
+
+
+<div class="hero-content">
+
+
+<h1>
+
+미래를 만드는<br>
+IT 전문가 교육
+
+</h1>
+
+
+<p>
+
+AI · WEB · DATA 기반 실무 중심 교육 플랫폼
+
+</p>
+
+
+
+<button class="hero-btn">
+
+교육과정 보기
+
+</button>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- SEARCH SERVICE -->
+
+
+<section class="find-service">
+
+
+<h2>
+
+무엇을 찾으세요?
+
+</h2>
+
+
+
+<p>
+
+원하는 서비스를 빠르게 확인하세요
+
+</p>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- MAIN SERVICE -->
+
+
+<section class="services">
+
+
+
+<div class="service-container">
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="icon">
+
+💬
+
+</div>
+
+
+<h3>
+
+온라인 상담
+
+</h3>
+
+
+<p>
+
+전문 상담사가 교육 과정과<br>
+취업 방향을 안내합니다.
+
+</p>
+
+
+<button>
+
+상담 신청
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="icon">
+
+📍
+
+</div>
+
+
+<h3>
+
+지점 안내
+
+</h3>
+
+
+<p>
+
+가까운 교육센터 위치와<br>
+오시는 길을 확인합니다.
+
+</p>
+
+
+<button>
+
+지점 보기
+
+</button>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="service-card">
+
+
+<div class="icon">
+
+✅
+
+</div>
+
+
+<h3>
+
+국비 가능 조회
+
+</h3>
+
+
+<p>
+
+내일배움카드 및<br>
+지원 가능 여부 확인
+
+</p>
+
+
+<button>
+
+조회하기
+
+</button>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<script>
+
+
+// 서비스 버튼 동작
+
+document.querySelectorAll(".service-card button")
+.forEach(button => {
+
+
+button.addEventListener("click",()=>{
+
+
+alert("해당 서비스 페이지로 이동합니다.");
+
+
+});
+
+
+});
+
+
+
+</script>
+
+
+
+</body>
+
+</html>
+</body>
+</html>
