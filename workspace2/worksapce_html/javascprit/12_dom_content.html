@@ -39,11 +39,17 @@
                 <th>제목</th>
                 <th>작성자</th>
             </tr>
+            <div class='quiz q2'>퀴즈2</div>
+            <div class='quiz q2-1'>퀴즈2-1</div>
+            <div class='quiz q2-2'>퀴즈2-2</div>
+            <div class='quiz q2'></div>
+            <div class='quiz q2-1'>퀴즈2-1</div>
             
             
         </tbody>
         <hr>
     </table>
+    <!-- <div class="as 1">test</div> -->
     <!-- <tbody id="borad">
              <table border=1>
                 <tr>
@@ -200,6 +206,8 @@
         chidlD.append(chidlD2)
         let tbody = document.querySelector('#tbody')
         tbody.append(chidlD)
+
+        
 
         // tbody.append(<tr><td>아아</td></tr>)
 
@@ -483,10 +491,21 @@
         // "힌트만 달라 쮸인님~♥"
         const di = document.createElement('div')
 
-        di.setAttribute('class','quiz q1')
-        di.innerText='힌트만 달라'
+        log.append(di)
 
+        di.setAttribute('class','quiz')
+        di.classList.add('q1')
+        // di.classList.add('quiz')
+        
+        
+        
         // q1.textContent='쮸인님'
+        let a =di.innerText=' 쮸인님'
+
+        let b = di.textContent='힌트만 달라'
+        // textContent
+        console.log(b+a)
+        di.textContent=b+a
         
 
          console.log(di)
@@ -505,18 +524,63 @@
             <div class='quiz q2'></div>
             <div class='quiz q2-1'>퀴즈2-1</div>
         */
+            // div값 5개를 생으로 만들라고?
+            // 그냥 dom을 반복문으로 붙히고 5개 만들면 되지않나?
+            // for(let asb=0; asb<5; asb++){
+            //     let qz = document.createElement('div')
+            //     qz.classList.add('quiz')
+            // }
+
+            // 5개 만들고 class를 quiz까지 줬음
+            // 이제 q2 2개와 q2-1 2개 q2-2를 하나 부여해야함
+            // 근데 그러러면 하나의 배열에 5개의 해당 class들을 넣어야함 해당 값의 위치값까지 알아야함.
+
+
+
+       
+
         // 위 코드 중 클래스 q2가 몇개인가?
         // 2개
+
+        let asd =document.querySelectorAll('.q2')
+    //     for(let zxc = 0 ; zxc<5 ; zxc++){
+
+    //     asd=document.querySelectorall('.q2')
+    // }
+        console.log(asd)
+
+        console.log(asd.length,'개')
+        
+
+
+
 
         // 문제3
         // 위 코드에서 q2를 가지는 태그의 글씨를 출력하시오
         /* 
             퀴즈2-1
+            자 생각을 해
+            q2가 가지는 태그의 글씨 출력하려면 무엇을 해야하나?
+            q2만 있는 애를 dom안에 있어야함
+            해당 dom안에 있는 객체는 asd임
+            asd로 콘솔로그로 출력해도 nodelist로 나옴
+            div quiz q2 이런 해당 값만 나오지 해당 텍스트가 나오지않음
+             
 
         */
+       
+    //    let sc = document.querySelectorAll('q2')
+       
+
 
         // 문제4
         // 위 코드 중 글씨가 없는 태그의 내용을 "비어있음"으로 바꾼다
+
+
+
+        // }
+
+
             
 
 

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <form>
+        <input type="text" id="id" value="abcd"><br>
+        <input type="password" id="pw"><br>
+        <input type="date" id="date"><br>
+
+        <input type="radio" name="ai" value="1"checked>chatGPT
+        <input type="radio" name="ai" value="2">gemini
+        <input type="radio" name="ai" value="3">grok
+        <input type="radio" name="ai" value="4">perplxity(구글 대신 검색)
+        <input type="radio" name="ai" value="5">claude
+
+        <input type="checkbox" class="game" value="a">마비노기 모바일 
+        <input type="checkbox" class="game" value="b">스타듀밸리
+        <input type="checkbox" class="game" value="c">워크래프트
+        <input type="checkbox" class="game" value="d">오버워치
+        <input type="checkbox" class="game" value="e">메이플
+        <input type="checkbox" class="game" value="f">마인크래프트
+
+        <br>
+        <select id="lang">
+            <option value="1">javascript</option>
+            <option value="2" selected>python</option>
+            <option value="3">DB</option>
+            <option value="4">java</option>
+        </select>
+
+        <br>
+        <textarea id="textarea">초기값</textarea>
+        <div id="view">sd</div>
+        
+        
+    </form>
+
+
+    <script>
+        setTimeout( ()=>{
+            const text = document.querySelector('#id')
+            const password=document.querySelector('#qw')
+
+            console.log('text', text.value)
+            text.value='12345'
+
+            console.log('password',pw.value)
+            // password.value='abcd'
+            // id data인 dom을 가져와서
+            // 아무것도 선택하지 않았을때 무슨값인지?
+            // 날짜를 선택하고 무슨값인지?
+            // js로 날짜를 오늘로 바꾸기
+
+            const date = document.querySelector('#date')
+            console.log('date', '[',date.value,']')
+            date.value = '2026-07-20'
+            const today = new Date()
+            const y = today.getFullYear()
+            let m = today.getMonth()+1
+            if (m<10){
+                m = '0' + m
+            }
+            // m = ('0'+m).slice(-2)
+
+            let d = today.getDate()
+            d = ('0'+d).slice(-2)
+
+            // const result = y + '-'+ m + '-' + d
+            const day = '${y}-${m}-${d}'
+            today.value = day
+
+            const radio = document.querySelector('[name=ai]:checked')
+
+            console.log(radio.value)
+
+            const radios = document.querySelectorAll('[name=ai]')
+
+            radios[1].checked = true
+
+            // const checks = document.querySelectorAll('[class=game]:checked')
+            const checks = document.querySelectorAll('.game:not(checked)')
+            for(let i = 0; i<checks.length; i++){
+                console.log(checks[i].value)
+            }
+            
+            const checks2 = document.querySelectorAll('.game')
+            for(let a=0; a<checks2.length; a++){
+                console.log(checks2[a].value, checks2[a].checked)
+                if(checks2[a].checked == true){
+                    console.log(checks2[a].value)
+                }
+            }
+            checks2[0].checked = true
+
+            const lang = document.getElementById('lang')
+            console.log(lang.value)
+
+            lang.value='4'
+
+            const textarea = document.querySelector('#textarea')
+            console.log(textarea.value)
+            console.log(textarea.value.indexOf('\n'))
+
+            const dew = document.querySelector('#view')
+            dew.innerHTML = textarea.value
+
+            let str = textarea.value.replace(/\n/g, '<br>')
+            dew.innerHTML=str
+
+            
+            
+        }, 1000 * 5)
+
+        
+    </script>
+</body>
+</html>
